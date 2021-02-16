@@ -1,0 +1,34 @@
+header {
+  .nav {
+    &__burger {
+      display: none;
+      &-line {
+        width: 3rem;
+        height: 0.3rem;
+        margin: 0.5rem;
+        background-color: $color-light-s;
+      }
+    }
+  }
+}
+
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .nav__burger-line1{
+  transform: rotate(-45deg) translate(-5px,6px );
+}
+.toggle .nav__burger-line2{
+  opacity: 0;
+}
+.toggle .nav__burger-line3{
+  transform: rotate(45deg) translate(-5px,-6px );
+}

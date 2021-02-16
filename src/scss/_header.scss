@@ -1,0 +1,114 @@
+header {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    position: absolute;
+    top: 6rem;
+    @media (max-width: 768px) {
+      top: 3rem;
+    }
+    .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      width: 120rem;
+  
+      .nav-list {
+        display: flex;
+        width: 44.3rem;
+        justify-content: space-between;
+  
+        &__item {
+          display: flex;
+          align-items: center;
+          list-style-type: none;
+        }
+  
+        &__link {
+          color: $color-light-s;
+          font-family: Arial;
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 160%;
+  
+          &_active {
+            border-bottom: solid 0.3rem $color-primary;
+          }
+          &_disabled {
+            color: $color-dark-s;
+          }
+        }
+        &__link:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+    
+      &__title {
+        color: $color-primary;
+        @include logo_title();
+      }
+      &__subtitle {
+        margin-top: 1rem;
+        color: $color-light-xl;
+        text-align: center;
+        @include logo_subtitle();
+      }
+    }
+
+
+
+  }
+  
+  
+
+  @media screen and (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
+    header {
+      .nav {
+        .nav-list {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 32rem;
+          position: absolute;
+          z-index: 2;
+          right: 0;
+          height: 60rem;
+          top: -2rem;
+          background-color: $color-dark-3xl;
+          transform: translateX(100%);
+          transition:All 0.5s ease-in;
+          &__item {
+            opacity:0;
+          }
+          &__link {
+            font-size: 2rem;
+          }
+        }
+        
+        .nav__burger{
+          display: block;
+          margin: 0 5rem;
+          cursor: pointer;
+          position: relative;
+          z-index: 2;
+          transition:all 0.5s ease;
+        }
+  
+        .nav-active {
+          transform: translateX(0%);
+  
+        }
+      }
+    }
+  }

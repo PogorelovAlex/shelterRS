@@ -1,0 +1,63 @@
+.donation {
+    padding-top: 8rem;
+    padding-bottom: 10.3rem;
+  
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
+    }
+    &__image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 768px) {
+        padding-top: 5.5rem;
+      }
+    }
+    &__content {
+      margin-left: 3rem;
+      max-width: 38rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @media (max-width: 768px) {
+        margin-left: 19.5rem;
+      }
+    }
+    &__title {
+      color: $color-dark-l;
+      @include h3();
+  
+      span {
+        display: block;
+      }
+    }
+  
+    &__subtitle {
+      margin-top: 2rem;
+      color: $color-dark-l;
+      @include h5();
+    }
+    &__payment {
+      @include button_primary();
+      margin-top: 2rem;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      display: flex;
+  
+      &-text {
+        padding-left: 1.5rem;
+        @include h4;
+        text-decoration: none;
+        color: $color-dark-l;
+      }
+    }
+    &__description {
+      margin-top: 2rem;
+      color: $color-dark-m;
+      @include paragraph-s();
+    }
+  }

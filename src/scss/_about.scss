@@ -1,0 +1,64 @@
+  
+.about {
+    display: flex;
+  
+    &__wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 7% 15.5% 9%;
+  
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        flex-flow: column-reverse;
+      }
+    }
+    & .wrapper {
+      justify-content: center;
+    }
+    &__image-wrapper {
+      display: flex;
+    }
+  
+    &__image {
+      width: 100%;
+    }
+    .hero-image-dog-cat {
+      @media (max-width: 768px) {
+        margin-left: 6rem;
+        margin-top: 5rem;
+        max-width: 30rem;
+        max-height: 40.8rem;
+      }
+    }
+    &__content {
+      display: flex;
+      justify-content: center;
+      max-width: 43rem;
+      flex-direction: column;
+      @media (max-width: 768px) {
+        padding-top: 2.1rem;
+      }
+    }
+    &__title {
+      span {
+        display: block;
+        letter-spacing: 0.2rem;
+      }
+      color: $color-dark-l;
+      @include h3();
+    }
+  
+    &__description {
+      margin-top: 2.5rem;
+      p {
+        &:nth-child(2) {
+          margin-top: 2.5rem;
+        }
+  
+        color: $color-dark-xl;
+        @include paragraph-l();
+      }
+    }
+  }

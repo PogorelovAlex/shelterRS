@@ -4,6 +4,13 @@
 @import "vars";
 @import "settings";
 @import "pets";
+@import "burgerMenu";
+@import "header";
+@import "hero";
+@import "about";
+@import "help";
+@import "donation";
+@import "footer";
 
 :root {
   font-size: 10px;
@@ -30,195 +37,9 @@
   }
 }
 
-header {
-  width: 100vw;
-  max-width: 100%;
-  position: absolute;
-  top: 6rem;
-  @media (max-width: 768px) {
-    top: 3rem;
-  }
-  .nav {
-    width: 44.3rem;
-    display: flex;
-
-    .nav-list {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      list-style-type: none;
-
-      &__item {
-        display: flex;
-        align-items: center;
-      }
-
-      &__link {
-        color: $color-light-s;
-        font-family: Arial;
-        font-size: 1.5rem;
-        font-weight: 400;
-        line-height: 160%;
-
-        &_active {
-          border-bottom: solid 0.3rem $color-primary;
-        }
-        &_disabled {
-          color: $color-dark-s;
-        }
-      }
-      &__link:hover {
-        cursor: pointer;
-        opacity: 0.8;
-      }
-    }
-  }
-}
-
-.logo {
-  display: flex;
-  flex-direction: column;
-
-  &__title {
-    color: $color-primary;
-    @include logo_title();
-  }
-  &__subtitle {
-    margin-top: 1rem;
-    color: $color-light-xl;
-    text-align: center;
-    @include logo_subtitle();
-  }
-}
-
 .main {
   display: flex;
   flex-direction: column;
-}
-
-.hero {
-  padding-top: 18rem;
-  display: flex;
-  background: $start-screen-gradient-background;
-  @media (max-width: 768px) {
-    padding-top: 15rem;
-  }
-}
-
-.hero__content {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.content-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 8rem;
-  max-width: 46.8rem;
-
-  &__title {
-    color: $color-light-xl;
-    max-width: 31rem;
-    @include h2();
-  }
-
-  &__subtitle {
-    color: $color-dark-s;
-    margin-top: 4.2rem;
-    font-size: 1.5rem;
-    font-family: Arial;
-    font-weight: 400;
-    line-height: 160%;
-  }
-
-  &__button {
-    margin-top: 4rem;
-
-    @include button_primary();
-    @media (max-width: 768px) {
-      margin-left: 13rem;
-    }
-  }
-}
-.hero__image-wrapper {
-  display: flex;
-}
-
-.hero-image {
-  width: 100%;
-  max-width: 69.8rem;
-  max-height: 72.8rem;
-  @media (max-width: 768px) {
-    margin-left: 13rem;
-    padding-top: 2.5rem;
-    max-width: 56.9rem;
-    max-height: 59.3rem;
-  }
-}
-.about {
-  display: flex;
-
-  &__wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding:  7% 15.5% 9%;
-    
-    @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      flex-flow: column-reverse;
-    }
-  }
-  & .wrapper {
-    justify-content: center;
-  }
-  &__image-wrapper {
-    display: flex;
-  }
-
-  &__image {
-    width: 100%;
-  }
-  .hero-image-dog-cat {
-    @media (max-width: 768px) {
-      margin-left: 6rem;
-      margin-top: 5rem;
-      max-width: 30rem;
-      max-height: 40.8rem;
-    }
-  }
-  &__content {
-    display: flex;
-    justify-content: center;
-    max-width: 43rem;
-    flex-direction: column;
-    @media (max-width: 768px) {
-      padding-top: 2.1rem;
-    }
-  }
-  &__title {
-    span {
-      display: block;
-      letter-spacing: 0.2rem;
-    }
-    color: $color-dark-l;
-    @include h3();
-  }
-
-  &__description {
-    margin-top: 2.5rem;
-    p {
-      &:nth-child(2) {
-        margin-top: 2.5rem;
-      }
-
-      color: $color-dark-xl;
-      @include paragraph-l();
-    }
-  }
 }
 
 .pets {
@@ -312,196 +133,23 @@ header {
   }
 }
 
-.help {
-  padding-top: 8rem;
-  padding-bottom: 10rem;
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  &__title {
-    color: $color-dark-l;
-    text-align: center;
-    @include h3();
-    span {
-      display: block;
-    }
-  }
 
-  &__content {
-    margin-top: 6rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    column-gap: 12rem;
-    row-gap: 5.5rem;
-  }
-  &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &-icon {
-      width: 6rem;
-      height: 6rem;
-    }
-
-    &-title {
-      margin-top: 3rem;
-      color: $color-dark-l;
-      text-align: center;
-      @include h4();
-    }
-  }
-}
-
-.donation {
-  padding-top: 8rem;
-  padding-bottom: 10.3rem;
-
-  &__wrapper {
-    display: flex;
-    justify-content: center;
-    @media (max-width: 768px) {
-      flex-direction: column-reverse;
-    }
-  }
-  &__image-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media (max-width: 768px) {
-      padding-top: 5.5rem;
-    }
-  }
-  &__content {
-    margin-left: 3rem;
-    max-width: 38rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    @media (max-width: 768px) {
-      margin-left: 19.5rem;
-    }
-  }
-  &__title {
-    color: $color-dark-l;
-    @include h3();
-
-    span {
-      display: block;
-    }
-  }
-
-  &__subtitle {
-    margin-top: 2rem;
-    color: $color-dark-l;
-    @include h5();
-  }
-  &__payment {
-    @include button_primary();
-    margin-top: 2rem;
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
-    display: flex;
-
-    &-text {
-      padding-left: 1.5rem;
-      @include h4;
-      text-decoration: none;
-      color: $color-dark-l;
-    }
-  }
-  &__description {
-    margin-top: 2rem;
-    color: $color-dark-m;
-    @include paragraph-s();
-  }
-}
-
-.footer {
-  background: $footer-gradient-background;
-  padding-top: 4rem;
-  .wrapper {
-    @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  &__content {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.6rem;
-    margin-bottom: 6rem;
-    padding-right: 16.5rem;
-    @media (max-width: 768px) {
-      display: flex;
-      width: 70.8rem;
-      padding: 0 3.5rem;
-      justify-content: space-around;
-      margin: 0;
-    }
-  }
-
-  &__locations,
-  &__contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    &-title {
-      color: $color-light-xl;
-      @include h3();
-
-      span {
-        display: block;
-      }
-    }
-
-    &-address,
-    &-phone,
-    &-mail {
-      display: flex;
-      align-items: center;
-
-      &-place {
-        span {
-          display: block;
-        }
-      }
-
-      &-place,
-      &-text {
-        margin-left: 2rem;
-        color: $color-primary;
-        @include h4();
-      }
-    }
-  }
-
-  &__image-wrapper {
-    @media (max-width: 768px) {
-      display: flex;
-      justify-content: center;
-      padding-top: 12rem;
-    }
-  }
-}
 @media screen and (max-width: 1280px) {
   .wpapper {
     padding: 0 4rem;
   }
 }
 
-@media screen and (max-width: 1180px) {
-  .hero__content {
-    flex-direction: column;
-  }
-  .hero__content {
-    align-items: center;
-  }
+.dark-screen {
+  position:fixed;
+  display:none;
+  overflow: auto;
+  left: 0; 
+  right: 0; 
+  top: 0; 
+  bottom: 0;
+  background:$dark-screen;
+  z-index:1;
+  min-height: 100%;
 }
